@@ -1,0 +1,32 @@
+{
+  "name": "harttle.land",
+  "version": "1.0.0",
+  "description": "source code for https://harttle.land",
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-mocha": "^4.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "uglify-js": "^3.4.9"
+  },
+  "scripts": {
+    "lint": "eslint --ignore-pattern *.min.js assets/js",
+    "start": "bundle exec jekyll serve -w --drafts --host 0.0.0.0 --incremental",
+    "uglify": "cat assets/js/blog-*.js | uglifyjs -mc > assets/js/blog.min.js",
+    "build": "bundle exec jekyll build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harttle/harttle.github.io.git"
+  },
+  "author": "harttle <yangjvn@126.com>",
+  "license": "CC-BY 4.0",
+  "bugs": {
+    "url": "https://github.com/harttle/harttle.github.io/issues"
+  },
+  "homepage": "https://github.com/harttle/harttle.github.io#readme"
+}

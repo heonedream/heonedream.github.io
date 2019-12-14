@@ -1,0 +1,53 @@
+title: Harttle Land
+description: 分享技术，共建开放平台
+url: https://harttle.land
+author: Harttle
+email: yangjvn@126.com
+logo: assets/img/favicon.png
+keywords: 
+  - Web
+  - C++
+  - Linux
+  - Vim
+
+permalink: /:year/:month/:day/:title.html
+paginate: 7
+paginate_path: "page:num"
+markdown: kramdown
+markdown_ext: md
+excerpt_separator: "<!--more-->"
+highlighter: rouge
+lsi: false
+exclude: ['README.md', '.*', 'bin/', 'Gemfile', 'node_modules', '*.log', 'package.json', 'vendor']
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+ga: 'UA-65795020-1'
+
+sass:
+    style: compressed
+
+defaults:
+  -
+    scope:
+      path: "_drafts"
+    values:
+      layout: "blog"
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "blog"
+
+series:
+  'Effective-C++': '/effective-cpp.html'
+  'Vim-Practice': '/vim-practice.html'
+  'Git-Workflow': '/git-workflow.html'
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-include-cache
